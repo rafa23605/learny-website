@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learny — AI Czech Language Tutor</title>
   <meta name="description" content="Learn Czech through real conversation with an AI-powered Telegram tutor. Voice practice, smart corrections, and personalized lessons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="navbar-logo">Learny</a>
+      <a href="#" class="navbar-logo">
+        <div class="logo-mark">🇨🇿</div>
+        <span>the<strong>learny</strong></span>
+      </a>
       <div class="navbar-links">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#features">how it works <span class="nav-arrow">›</span></a>
+        <a href="#pricing">pricing <span class="nav-arrow">›</span></a>
         <a href="#faq">FAQ</a>
-        <a href="#" class="btn btn-primary navbar-cta">Try Free</a>
+        <a href="#" class="btn btn-pill-primary">TRY FREE</a>
       </div>
       <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
@@ -31,148 +34,342 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Learn Czech Through<br><span>Real Conversation</span></h1>
-      <p>Your AI-powered Czech tutor lives right in Telegram. Practice speaking, get instant corrections, and build confidence — all at your own pace.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-primary btn-large">Start Free Trial</a>
-        <a href="#how-it-works" class="btn btn-outline btn-large">See How It Works</a>
+      <div class="hero-layout">
+        <div class="hero-text">
+          <h1>learn czech to<br><strong>speak with confidence</strong></h1>
+          <p>Learny is your AI Czech tutor inside Telegram. Practice speaking, get gentle corrections, and build real fluency — at your own pace, every single day.</p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-pill-primary btn-lg">TRY IT OUT</a>
+            <a href="#how-it-works" class="btn btn-pill-outline btn-lg">HOW IT WORKS</a>
+          </div>
+          <div class="avatar-row">
+            <div class="avatar-stack">
+              <div class="avatar av1">А</div>
+              <div class="avatar av2">М</div>
+              <div class="avatar av3">И</div>
+              <div class="avatar av4">К</div>
+            </div>
+            <span>Join <strong>100+</strong> other learners</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="chat-mockup">
+            <div class="chat-header">
+              <div class="chat-avatar-icon">🇨🇿</div>
+              <div>
+                <div class="chat-name">Learny</div>
+                <div class="chat-online">● online now</div>
+              </div>
+            </div>
+            <div class="chat-body">
+              <div class="bubble bubble-bot">Ahoj! Jak se jmenuješ? 👋</div>
+              <div class="bubble bubble-user">Ahoj! já jsem Anna.</div>
+              <div class="bubble bubble-bot">
+                Skoro správně! 🎯<br>
+                Říkáme <em>"Já jsem Anna"</em> — velké J.<br><br>
+                Odkud jsi?
+              </div>
+              <div class="bubble bubble-user">Jsem z Ukrajiny 🇺🇦</div>
+              <div class="bubble bubble-bot">Výborně! Perfektní! 🔥</div>
+            </div>
+            <div class="chat-footer">
+              <span>Type a message…</span>
+              <button class="mic">🎤</button>
+            </div>
+          </div>
+          <!-- floating review card -->
+          <div class="hero-review">
+            <img src="https://i.pravatar.cc/36?img=47" alt="Reviewer" class="review-avatar">
+            <div class="review-text">
+              <strong>"Finally Czech feels natural to me!"</strong>
+              <span>— Olena, Kyiv → Prague</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <span class="hero-badge">3 days free, no card required</span>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="features">
+  <!-- Logos bar -->
+  <section class="logos-bar">
     <div class="container">
-      <h2 class="section-title">Everything You Need to Speak Czech</h2>
-      <p class="section-subtitle">From your first "Ahoj" to confident conversations — Learny adapts to your level and keeps you motivated.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon voice">&#127908;</div>
-          <h3>Voice Practice</h3>
-          <p>Send voice messages and get natural responses back. Practice pronunciation and listening comprehension in real-time, just like talking to a friend.</p>
+      <p class="logos-label">USED BY UKRAINIAN SPEAKERS LIVING IN</p>
+      <div class="logos-row">
+        <span class="logo-pill">🇨🇿 Prague</span>
+        <span class="logo-pill">🇨🇿 Brno</span>
+        <span class="logo-pill">🇨🇿 Ostrava</span>
+        <span class="logo-pill">🇨🇿 Plzeň</span>
+        <span class="logo-pill">🇨🇿 Liberec</span>
+        <span class="logo-pill">🇨🇿 Olomouc</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 1: Voice Practice -->
+  <section id="features" class="feature-row">
+    <div class="container">
+      <div class="feature-layout">
+        <div class="feature-text reveal">
+          <p class="feature-eyebrow">you practice</p>
+          <h2><strong>speaking out loud</strong></h2>
+          <p>Send voice messages and get natural, flowing responses back. Practice real pronunciation and listening comprehension — just like talking to a friend who always has time for you.</p>
+          <a href="#" class="btn btn-pill-primary btn-md">START SPEAKING</a>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon correction">&#9997;&#65039;</div>
-          <h3>Smart Error Correction</h3>
-          <p>Learny catches your mistakes without killing the flow. You'll see gentle corrections with explanations in Russian, so you learn without frustration.</p>
+        <div class="feature-visual reveal">
+          <div class="feature-card-visual voice-card">
+            <div class="voice-ui">
+              <div class="voice-waveform">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="voice-label">Recording… Jak se máš?</p>
+              <div class="voice-response">
+                <div class="bubble bubble-bot small-bubble">Slyším tě! Řekl jsi "Jak se máš?" — perfektní výslovnost! 🎉</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon level">&#127919;</div>
-          <h3>Level Assessment</h3>
-          <p>Take a quick placement test when you start, and Learny adjusts every response to your level — from complete beginner to advanced learner.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 2: Corrections -->
+  <section class="feature-row feature-row-alt">
+    <div class="container">
+      <div class="feature-layout feature-layout-reverse">
+        <div class="feature-visual reveal">
+          <div class="feature-card-visual correction-card">
+            <div class="correction-ui">
+              <div class="bubble bubble-user small-bubble">já studuju češtinu každy den</div>
+              <div class="correction-annotation">
+                <span class="tag-wrong">každy</span>
+                <span class="arrow-right">→</span>
+                <span class="tag-right">každý</span>
+              </div>
+              <div class="bubble bubble-bot small-bubble">Skoro! 😊 Píšeme <em>"každý"</em> — s háčkem nad Y. Jinak perfektní!</div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon streak">&#128293;</div>
-          <h3>Daily Streaks</h3>
-          <p>Build a practice habit with daily streaks and progress tracking. A few minutes every day beats hours once a week.</p>
+        <div class="feature-text reveal">
+          <p class="feature-eyebrow">you get</p>
+          <h2><strong>gentle corrections</strong></h2>
+          <p>Learny catches your mistakes without breaking the conversation. You'll see clear corrections with explanations in Ukrainian — so you learn in context, not from a grammar book.</p>
+          <a href="#" class="btn btn-pill-primary btn-md">SEE IT IN ACTION</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 3: Streaks -->
+  <section class="feature-row">
+    <div class="container">
+      <div class="feature-layout">
+        <div class="feature-text reveal">
+          <p class="feature-eyebrow">you build</p>
+          <h2><strong>a daily habit</strong></h2>
+          <p>Small daily sessions beat marathon study weekends. Learny tracks your streaks, celebrates your progress, and gently nudges you back if you miss a day. Consistency is everything.</p>
+          <a href="#" class="btn btn-pill-primary btn-md">BUILD YOUR STREAK</a>
+        </div>
+        <div class="feature-visual reveal">
+          <div class="feature-card-visual streak-card">
+            <div class="streak-ui">
+              <div class="streak-header">🔥 Your Streak</div>
+              <div class="streak-number">14 days</div>
+              <div class="streak-grid">
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot active"></div>
+                <div class="streak-dot today"></div>
+                <div class="streak-dot empty"></div>
+                <div class="streak-dot empty"></div>
+                <div class="streak-dot empty"></div>
+                <div class="streak-dot empty"></div>
+                <div class="streak-dot empty"></div>
+                <div class="streak-dot empty"></div>
+              </div>
+              <div class="streak-msg">Keep going! You're on a roll 💪</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section id="how-it-works" class="how-it-works">
+  <section id="how-it-works" class="how-section">
     <div class="container">
-      <h2 class="section-title">Start Speaking in 3 Steps</h2>
-      <p class="section-subtitle">No apps to install, no accounts to create. Just open Telegram and go.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
+      <div class="section-header reveal">
+        <p class="feature-eyebrow center">get started</p>
+        <h2>up and running<br><strong>in 3 steps</strong></h2>
+        <p class="sub">No apps to install. No accounts to create. Just open Telegram and go.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-card reveal">
+          <div class="step-emoji">💬</div>
+          <div class="step-num">01</div>
           <h3>Open the Bot</h3>
-          <p>Find Learny on Telegram and hit Start. You'll be chatting in seconds.</p>
+          <p>Find Learny on Telegram and hit Start. You'll be chatting in seconds — no setup needed.</p>
         </div>
-        <div class="step">
-          <div class="step-number">2</div>
+        <div class="step-card reveal">
+          <div class="step-emoji">🎯</div>
+          <div class="step-num">02</div>
           <h3>Take the Level Test</h3>
-          <p>A short, friendly assessment figures out where you are so lessons match your skills.</p>
+          <p>A friendly 5-minute assessment places you at the right level — from total beginner to advanced.</p>
         </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Practice Daily</h3>
-          <p>Chat by text or voice whenever you have a moment. Learny is available 24/7.</p>
+        <div class="step-card reveal">
+          <div class="step-emoji">🔥</div>
+          <div class="step-num">03</div>
+          <h3>Practice Every Day</h3>
+          <p>Chat by text or voice whenever you have a moment. 10 minutes a day is all it takes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="feature-eyebrow center">reviews</p>
+        <h2>loved by<br><strong>real learners</strong></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p>"After 3 months with Learny I had my first real conversation in Czech at work. I was shocked it actually worked!"</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/40?img=5" alt="">
+            <div>
+              <strong>Oksana K.</strong>
+              <span>Living in Prague, from Kharkiv 🇺🇦</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"The voice practice is incredible. I can send a voice note, get corrected, and actually hear what I did wrong. No other app does this."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/40?img=12" alt="">
+            <div>
+              <strong>Mykola R.</strong>
+              <span>Engineer in Brno, from Odesa 🇺🇦</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"I tried Duolingo, textbooks, everything. Learny is the first thing that made Czech actually stick because it feels like a real conversation."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/40?img=9" alt="">
+            <div>
+              <strong>Iryna S.</strong>
+              <span>Teacher in Ostrava, from Lviv 🇺🇦</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section id="pricing" class="pricing">
+  <section id="pricing" class="pricing-section">
     <div class="container">
-      <h2 class="section-title">Simple, Transparent Pricing</h2>
-      <p class="section-subtitle">Start free. Upgrade when you're ready. Cancel anytime.</p>
-      <div class="pricing-cards">
+      <div class="section-header reveal">
+        <p class="feature-eyebrow center">pricing</p>
+        <h2>simple,<br><strong>transparent pricing</strong></h2>
+        <p class="sub">Start free. Upgrade when you're ready. Cancel anytime.</p>
+      </div>
+      <div class="pricing-trial-banner reveal">
+        <span class="trial-icon">🎁</span>
+        <span>Every plan starts with a <strong>3-day free trial</strong> — no credit card required</span>
+      </div>
+      <div class="pricing-grid reveal">
         <div class="pricing-card">
-          <h3>Free Trial</h3>
-          <div class="pricing-price">0 CZK</div>
-          <p style="color: var(--color-text-light); margin-bottom: 0;">for 3 days</p>
-          <ul class="pricing-features">
-            <li>Full access to all features</li>
-            <li>Voice and text practice</li>
-            <li>Level assessment</li>
-            <li>No credit card required</li>
-          </ul>
-          <a href="#" class="btn btn-outline">Start Free Trial</a>
-        </div>
-        <div class="pricing-card featured">
-          <span class="pricing-badge">Intro Price — 50% Off</span>
-          <h3>Monthly</h3>
-          <div class="pricing-price">400 CZK <span>/month</span></div>
-          <div class="pricing-original">800 CZK/month</div>
-          <ul class="pricing-features">
-            <li>Everything in Free Trial</li>
+          <div class="plan-name">Weekly</div>
+          <div class="plan-price">99 <span>CZK</span></div>
+          <div class="plan-period">/week</div>
+          <ul class="plan-features">
             <li>Unlimited conversations</li>
+            <li>Voice &amp; text practice</li>
             <li>Progress tracking &amp; streaks</li>
+            <li>Level assessment</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="#" class="btn btn-pill-outline btn-block">START FREE TRIAL</a>
+          <p class="plan-trial-note">3 days free, then 99 CZK/week</p>
+        </div>
+        <div class="pricing-card pricing-card-featured">
+          <div class="plan-badge">Best Value</div>
+          <div class="plan-name">Monthly</div>
+          <div class="plan-price">299 <span>CZK</span></div>
+          <div class="plan-period">/month</div>
+          <ul class="plan-features">
+            <li>Unlimited conversations</li>
+            <li>Voice &amp; text practice</li>
+            <li>Progress tracking &amp; streaks</li>
+            <li>Level assessment</li>
             <li>Priority support</li>
           </ul>
-          <a href="#" class="btn btn-primary">Get Started</a>
+          <a href="#" class="btn btn-pill-primary btn-block">START FREE TRIAL</a>
+          <p class="plan-trial-note">3 days free, then 299 CZK/month</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="faq">
+  <section id="faq" class="faq-section">
     <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-subtitle">Got questions? We've got answers.</p>
+      <div class="section-header reveal">
+        <p class="feature-eyebrow center">FAQ</p>
+        <h2>got<br><strong>questions?</strong></h2>
+      </div>
       <div class="faq-list">
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question">Do I need to install anything?</button>
-          <div class="faq-answer">
-            <p>Nope! Learny is a Telegram bot. If you already have Telegram, just search for the bot and start chatting. No extra apps, no sign-up forms.</p>
-          </div>
+          <div class="faq-answer"><p>Nope! Learny is a Telegram bot. If you already have Telegram, just search for the bot and start chatting. No extra apps, no sign-up forms.</p></div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question">What level of Czech do I need to start?</button>
-          <div class="faq-answer">
-            <p>Any level works — from complete beginner to advanced. When you first start, Learny gives you a quick placement test and adapts all conversations to your current level.</p>
-          </div>
+          <div class="faq-answer"><p>Any level — from complete beginner to advanced. When you first start, Learny gives you a quick placement test and adapts all conversations to your current level.</p></div>
         </div>
-        <div class="faq-item">
-          <button class="faq-question">Is the bot in Russian or Czech?</button>
-          <div class="faq-answer">
-            <p>Learny speaks Czech to you (that's the practice part!) but gives explanations and corrections in Russian, so you always understand what's going on.</p>
-          </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">Is the bot in Ukrainian or Czech?</button>
+          <div class="faq-answer"><p>Learny speaks Czech to you (that's the practice part!) but gives explanations and corrections in Ukrainian, so you always understand what's going on.</p></div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question">How does the free trial work?</button>
-          <div class="faq-answer">
-            <p>You get full access to every feature for 3 days — voice practice, corrections, everything. No credit card needed. After the trial, you can subscribe to keep going.</p>
-          </div>
+          <div class="faq-answer"><p>You get full access to every feature for 3 days — voice practice, corrections, everything. No credit card needed. After the trial, you can subscribe to keep going.</p></div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item reveal">
           <button class="faq-question">Can I cancel anytime?</button>
-          <div class="faq-answer">
-            <p>Yes, absolutely. You can cancel your subscription at any time, and you won't be charged for the next period. No hidden fees, no questions asked.</p>
-          </div>
+          <div class="faq-answer"><p>Yes, absolutely. Cancel at any time and you won't be charged for the next period. No hidden fees, no questions asked.</p></div>
         </div>
-        <div class="faq-item">
-          <button class="faq-question">How is this different from Duolingo or other apps?</button>
-          <div class="faq-answer">
-            <p>Most apps teach you to translate sentences. Learny teaches you to actually speak by having real conversations with you. You practice with voice messages, get corrections in context, and learn the Czech people actually use — not textbook phrases.</p>
-          </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">How is this different from Duolingo?</button>
+          <div class="faq-answer"><p>Most apps teach you to translate sentences. Learny teaches you to actually speak by having real conversations with you — by text and voice. You learn the Czech people actually use, not textbook phrases.</p></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-mark">🇨🇿</div>
+        <h2>ready to start<br><strong>speaking czech?</strong></h2>
+        <p>Your first 3 days are completely free. No credit card, no commitment — just you and your new Czech tutor.</p>
+        <a href="#" class="btn btn-pill-white btn-lg">TRY IT FREE →</a>
+        <span class="cta-note">No credit card · Cancel anytime · Start in 30 seconds</span>
       </div>
     </div>
   </section>
@@ -180,30 +377,33 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>Learny</h3>
-          <p>AI-powered Czech tutor that lives in your Telegram. Practice speaking, get corrections, and build confidence every day.</p>
-        </div>
-        <div class="footer-links">
+      <div class="footer-top">
+        <a href="#" class="footer-logo">
+          <div class="logo-mark">🇨🇿</div>
+          <span>the<strong>learny</strong></span>
+        </a>
+        <p>AI-powered Czech tutor inside Telegram. Practice speaking, get corrections, build confidence — every day.</p>
+      </div>
+      <div class="footer-links-row">
+        <div class="footer-col">
           <h4>Product</h4>
           <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Legal</h4>
           <a href="terms.html">Terms &amp; Conditions</a>
           <a href="privacy.html">Privacy Policy</a>
           <a href="refund.html">Refund Policy</a>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Contact</h4>
           <a href="mailto:support@learny.cz">support@learny.cz</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Learny. All rights reserved.</span>
+        <span>© 2025 Learny. All rights reserved.</span>
         <span>Operated by Darya Tulegaliyeva</span>
       </div>
     </div>

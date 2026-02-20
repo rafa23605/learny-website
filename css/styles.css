@@ -139,7 +139,7 @@ ul { list-style: none; }
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s, box-shadow 0.2s;
-  padding: 0 28px;
+  padding: env(safe-area-inset-top, 0px) 28px 0;
 }
 .navbar.scrolled {
   border-bottom-color: var(--border);
@@ -206,7 +206,7 @@ ul { list-style: none; }
    ============================================ */
 .hero {
   background: var(--cream);
-  padding: 130px 28px 80px;
+  padding: calc(130px + env(safe-area-inset-top, 0px)) 28px 80px;
 }
 
 .hero-layout {

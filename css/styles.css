@@ -164,14 +164,8 @@ ul { list-style: none; }
 .navbar-logo:hover { opacity: 1; }
 
 .logo-mark {
-  width: 40px;
-  height: 40px;
-  background: var(--pink-light);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  line-height: 1;
   flex-shrink: 0;
 }
 
@@ -385,7 +379,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 12px;
-  max-width: 260px;
+  max-width: 300px;
   box-shadow: var(--shadow-float);
 }
 .review-avatar {
@@ -404,6 +398,7 @@ ul { list-style: none; }
 .review-text span {
   font-size: 0.72rem;
   color: #aaa;
+  white-space: nowrap;
 }
 
 /* ============================================

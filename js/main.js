@@ -16,16 +16,27 @@ function initMobileMenu() {
   const navLinks = document.querySelector(".navbar-links");
   if (!hamburger || !navLinks) return;
 
+  const closeMenu = () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+  };
+
+  hamburger.setAttribute("aria-expanded", "false");
   hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.toggle("open");
+    hamburger.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", String(isOpen));
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("open");
-    });
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
   });
 }
 
@@ -46,25 +57,49 @@ function initSmoothScroll() {
 
 /* --- FAQ Accordion --- */
 function initFaqAccordion() {
-  document.querySelectorAll(".faq-question").forEach((button) => {
+  document.querySelectorAll(".faq-item").forEach((item, index) => {
+    const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    if (!button || !answer) return;
+
+    const questionId = `faq-question-${index + 1}`;
+    const answerId = `faq-answer-${index + 1}`;
+    button.setAttribute("id", questionId);
+    button.setAttribute("aria-controls", answerId);
+    button.setAttribute("aria-expanded", "false");
+    answer.setAttribute("id", answerId);
+    answer.setAttribute("role", "region");
+    answer.setAttribute("aria-labelledby", questionId);
+    answer.setAttribute("aria-hidden", "true");
+
     button.addEventListener("click", () => {
-      const item = button.parentElement;
-      const answer = item.querySelector(".faq-answer");
       const isActive = item.classList.contains("active");
 
       document.querySelectorAll(".faq-item.active").forEach((open) => {
         if (open !== item) {
+          const openButton = open.querySelector(".faq-question");
+          const openAnswer = open.querySelector(".faq-answer");
           open.classList.remove("active");
-          open.querySelector(".faq-answer").style.maxHeight = null;
+          if (openAnswer) {
+            openAnswer.style.maxHeight = null;
+            openAnswer.setAttribute("aria-hidden", "true");
+          }
+          if (openButton) {
+            openButton.setAttribute("aria-expanded", "false");
+          }
         }
       });
 
       if (isActive) {
         item.classList.remove("active");
         answer.style.maxHeight = null;
+        answer.setAttribute("aria-hidden", "true");
+        button.setAttribute("aria-expanded", "false");
       } else {
         item.classList.add("active");
         answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.setAttribute("aria-hidden", "false");
+        button.setAttribute("aria-expanded", "true");
       }
     });
   });
